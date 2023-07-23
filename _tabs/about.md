@@ -4,5 +4,18 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+Estudante de computação desde 2012 com foco em back-end e atuando profissionalmente a partir de 2018
+
+# Stacks
+
+## NodeJs
+
+Atuando profissionalmente com Typescript, Nestjs, Express, Typeorm, Testes unitários, Testes e2e, Testes de integração, Dominios ricos, DDD, Clean arquitecture, kafka, mongodb e mais.
+
+## PHP
+
+Atuando profissionalmente com projetos em Laravel e legados
+
+## Java
+
+Conhecimento na stack Spring-boot, JSF, Primefaces, Swing e JUnit
