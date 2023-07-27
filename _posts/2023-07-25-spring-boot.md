@@ -18,14 +18,14 @@ Após ter seu projeto spring-boot configurado é preciso adicionar algumas deped
 ```xml
 
 <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-data-jpa</artifactId>
 </dependency>
 
 <dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
+<groupId>com.h2database</groupId>
+<artifactId>h2</artifactId>
+<scope>runtime</scope>
 </dependency>
 
 ```
