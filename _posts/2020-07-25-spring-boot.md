@@ -1,6 +1,6 @@
 ---
 title: Como criar rapidamente uma conexão com um banco h2 no Spring-boot
-date: 2022-07-23 10:10:10 +/-TTTT
+date: 2020-07-25 10:10:10 +/-TTTT
 categories: [Java]
 tags: [spring-boot, java]
 ---
