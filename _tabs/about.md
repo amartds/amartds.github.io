@@ -21,6 +21,10 @@ Atuando profissionalmente com projetos em Laravel, Cake php, legados, migraçõe
 Atuando profissionalmente com Sreams consumidoras de bean logs de bancos de dados e tratamento e montagem de tópicos kafka.
 Também sei produzir apis em .Net, testes unitários, testes de integração, identity, arquitetura limpa.
 
+## Front end
+
+Apesar de não me considerar front end já trabalhei com React e VueJs e atualmente estou trabalhando com um pouco de angular.
+
 ## Java
 
 Conhecimento na stack Spring, Spring Data JPA, Hibernate, Testes unitários, JSF, Primefaces, Swing e JUnit.
