@@ -9,7 +9,7 @@ tags: [Padrões, TypeScript]
 
 Neste guia, você aprenderá como configurar uma aplicação NestJS para rodar em um container Docker e como adicionar monitoramento a esta aplicação usando o APM (Application Performance Monitoring) da Elastic.
 
-O primeiro passo é criar sua aplicação NestJS e, em seguida, instalar o APM da Elastic:
+O primeiro passo é criar sua aplicação NestJS e, em seguida instalar o APM da Elastic:
 
 ```shell
 
@@ -76,9 +76,9 @@ bootstrap();
 
 agora vamos montar nosso docker-compose com os containers do elastic.
 
-Logo no primeiro service, adicionamos a referência para nosso Dockerfile, em seguida adicionamos o elasticsearch que se trata da ferramenta onde os dados(index) são armazenados, em seguida adicionamos o kibana que se trata de um dashboard onde podemos analisar de forma gráfica todos os nosso serviços e por fim temos o apm que é onde vamos capturar a monitoração da nossa aplicação.
+No primeiro serviço adicionamos a referência para nosso Dockerfile, em seguida adicionamos o elasticsearch que se trata da ferramenta onde os dados(index) são armazenados, em seguida adicionamos o kibana que se trata de um dashboard onde podemos analisar de forma gráfica varias ferrametas da elastic e por fim temos o apm que é onde vamos capturar os dados de monitoração da nossa aplicação.
 
-Também adicioamos uma rede para conectar todos os containers.
+Também adicionamos uma rede para conectar todos os containers.
 
 ```yml
 version: "3.7"
@@ -145,5 +145,12 @@ Para rodar basta executar:
 ```shell
 docker-compose up
 ```
+
+em seguida você pode fazer um get em: localhost:3000
+
+dessa forma será adicionado a requisição e seus dados dentro do apm que fica em: `http://localhost:5601/app/apm/services/apm-monitor-nest/`
+
+link para o exemplo:
+[apm-monitor-nest-poc](https://github.com/andremartinsds/apm-monitor-nest-poc)
 
 é isso :)
