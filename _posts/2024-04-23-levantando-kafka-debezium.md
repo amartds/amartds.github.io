@@ -14,7 +14,7 @@ Muitas vezes, estamos lidando com um legado e, de alguma forma, precisamos escut
 Para configurar toda a infraestrutura necessária, vamos criar um docker-compose.
 
 ```yml
-version: '3.7'
+version: "3.7"
 
 services:
   mysql-kafka:
@@ -56,7 +56,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.8'
+          cpus: "0.8"
           memory: 800M
         reservations:
           memory: 100M
@@ -66,14 +66,14 @@ services:
     depends_on:
       - zookeeper
     ports:
-      - '9092:9092'
-      - '9094:9094'
+      - "9092:9092"
+      - "9094:9094"
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_NUM_PARTITIONS: 1
       KAFKA_DEFAULT_REPLICATION_FACTOR: 1
-      KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
       KAFKA_LISTENERS: INTERNAL://:9092,OUTSIDE://:9094
@@ -84,7 +84,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.8'
+          cpus: "0.8"
           memory: 800M
         reservations:
           memory: 100M
@@ -113,13 +113,11 @@ $docker-compose up
 
 A partir desse momento, se tudo der certo, teremos toda a nossa infraestrutura rodando localmente para testarmos.
 
-Você pode executar
+Para ver o estado dos containers ativos, você pode executar:
 
 ```
 docker ps
 ```
-
-Para ver o estado dos containers ativos, você pode executar:
 
 Se tudo ocorreu bem, vamos ver uma saída parecida com esta em nosso terminal:
 
@@ -167,6 +165,8 @@ curl --location 'localhost:8083/connectors' \
 }'
 
 ```
+
+Nesse ponto perceba que adicionamos como `connector` o prefixo de nossos tópicos gerados pelo debezium, outro ponto é que apontamos todas as configurações de conexão com banco e kafka diretamente pela rede interna que criamos no nosso docker-compose.
 
 # Inserindo dados
 
